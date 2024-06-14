@@ -1,0 +1,37 @@
+name: arpeggio
+description: "An E_Commerce Guitar App"
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  carousel_slider: ^4.2.1
+  cupertino_icons: ^1.0.8
+  flutter:
+    sdk: flutter
+  flutter_native_splash: ^2.4.0
+  get: ^4.6.6
+  google_fonts: ^6.2.1
+  iconsax: ^0.0.8
+  url_launcher: ^6.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/logo/Splash.png
+    - assets/logo/Logo.png
+    - assets/decor/Dekor_Atas.png
+    - assets/banner/promo_1.png
+    - assets/banner/promo_2.png
+    - assets/banner/promo_3.png
+    - assets/banner/promo_4.png
+    - assets/product/product_1.png
+    - assets/brand logo/gibson.png
