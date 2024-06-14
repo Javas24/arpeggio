@@ -15,7 +15,7 @@ class ArpElevatedButtonTheme {
       disabledForegroundColor: ArpColors.darkGrey,
       disabledBackgroundColor: ArpColors.buttonDisabled,
       side: const BorderSide(color: ArpColors.orange),
-      padding: const EdgeInsets.symmetric(vertical: ArpSizes.buttonHeight),
+      padding: const EdgeInsets.symmetric(vertical: 2),
       textStyle: const TextStyle(
           fontSize: 16,
           color: ArpColors.textWhite,

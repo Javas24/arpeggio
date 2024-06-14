@@ -2,9 +2,9 @@ import 'package:arpeggio/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class ArpShadowStyle {
-  static final verticalProductShadow = BoxShadow(
-      color: ArpColors.darkGrey.withOpacity(0.1),
-      blurRadius: 50,
-      spreadRadius: 7,
-      offset: const Offset(0, 2));
+  static const verticalProductShadow = BoxShadow(
+    color: ArpColors.darkGrey,
+    offset: Offset(2, 3),
+    blurRadius: 8.5,
+  );
 }

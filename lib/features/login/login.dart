@@ -92,6 +92,7 @@ class LoginScreen extends StatelessWidget {
                                     const SizedBox(
                                         height: ArpSizes.spaceBtwSections),
                                     SizedBox(
+                                        height: 46,
                                         width: double.infinity,
                                         child: ElevatedButton(
                                             onPressed: () => Get.to(
@@ -101,6 +102,7 @@ class LoginScreen extends StatelessWidget {
                                     const SizedBox(
                                         height: ArpSizes.spaceBtwItems),
                                     SizedBox(
+                                        height: 46,
                                         width: double.infinity,
                                         child: ElevatedButton(
                                             onPressed: () => Get.to(

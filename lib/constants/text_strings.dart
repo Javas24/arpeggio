@@ -7,6 +7,7 @@ class ArpTexts {
   static const String submit = "Submit";
   static const String appName = "T-Store";
   static const String tContinue = "Continue";
+  static const String lihat = "Lihat";
 
   // -- OnBoarding Texts
   static const String onBoardingTitle1 = "Choose your product";

@@ -5,9 +5,9 @@ class ArpProductTitleText extends StatelessWidget {
   const ArpProductTitleText({
     super.key,
     required this.title,
-    this.maxLines = 1,
+    this.maxLines = 2,
     this.textAlign = TextAlign.left,
-    this.fontWeight = FontWeight.w500,
+    this.fontWeight = FontWeight.w600,
   });
 
   final String title;
@@ -19,7 +19,8 @@ class ArpProductTitleText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: GoogleFonts.getFont('Inter', fontWeight: fontWeight, fontSize: 12),
+      style:
+          GoogleFonts.getFont('Poppins', fontWeight: fontWeight, fontSize: 14),
       overflow: TextOverflow.ellipsis,
       maxLines: maxLines,
       textAlign: textAlign,
