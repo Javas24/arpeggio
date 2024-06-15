@@ -19,7 +19,7 @@ class ArpProductCards extends StatelessWidget {
         width: 172,
         padding: const EdgeInsets.all(0),
         decoration: BoxDecoration(
-          boxShadow: [ArpShadowStyle.verticalProductShadow],
+          boxShadow: const [ArpShadowStyle.verticalProductShadow],
           borderRadius: BorderRadius.circular(ArpSizes.productImageRadius),
           color: ArpColors.lightContainer,
         ),
@@ -27,7 +27,7 @@ class ArpProductCards extends StatelessWidget {
           children: [
             ArpRoundedContainer(
               height: 212,
-              padding: const EdgeInsets.all(12),
+              padding: const EdgeInsets.all(8),
               backgroundColor: ArpColors.arpGradient,
               child: Stack(
                 children: [
