@@ -10,7 +10,7 @@ class PromoCarousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CarouselSlider(
-      options: CarouselOptions(height: 152, viewportFraction: 0.840),
+      options: CarouselOptions(height: 158, viewportFraction: 0.852),
       items: const [
         ArpRoundedImage(imageUrl: 'assets/banner/promo_1.png'),
         ArpRoundedImage(imageUrl: 'assets/banner/promo_2.png'),

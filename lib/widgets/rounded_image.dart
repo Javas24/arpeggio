@@ -11,7 +11,7 @@ class ArpRoundedImage extends StatelessWidget {
     this.border,
     this.backgroundColor = Colors.transparent,
     this.fit = BoxFit.cover,
-    this.padding = const EdgeInsets.only(left: 6, right: 6),
+    this.padding = const EdgeInsets.only(left: 0, right: 0),
     this.isNetworkImage = false,
     this.onPressed,
     this.borderRadius = ArpSizes.md,

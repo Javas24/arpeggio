@@ -1,4 +1,5 @@
 import 'package:arpeggio/features/home/home.dart';
+import 'package:arpeggio/features/profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -36,6 +37,6 @@ class NavigationController extends GetxController {
   final screens = [
     const HomeScreen(),
     Container(color: Colors.blue),
-    Container(color: Colors.deepOrange)
+    const ProfileScreen()
   ];
 }

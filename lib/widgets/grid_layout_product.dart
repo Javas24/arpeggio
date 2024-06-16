@@ -1,11 +1,11 @@
 import 'package:arpeggio/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
-class ArpGridLayout extends StatelessWidget {
-  const ArpGridLayout(
+class ArpGridLayoutProduct extends StatelessWidget {
+  const ArpGridLayoutProduct(
       {super.key,
       required this.itemCount,
-      this.mainAxisExtent = 112,
+      this.mainAxisExtent = 344,
       required this.itemBuilder});
 
   final int itemCount;
