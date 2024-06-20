@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ArpFullScreenLoader {
-  static void openLoadingDialog(String text, String animation) {
+  static void openLoadingDialog(String text) {
     showDialog(
         context: Get.overlayContext!,
         barrierDismissible: false,
@@ -17,9 +17,7 @@ class ArpFullScreenLoader {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const SizedBox(height: 250),
-                  Expanded(
-                      child: ArpAnimationLoaderWidget(
-                          text: text, animation: animation))
+                  ArpAnimationLoaderWidget(text: text)
                 ],
               ),
             )));

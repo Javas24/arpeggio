@@ -1,10 +1,12 @@
 import 'package:arpeggio/constants/colors.dart';
 import 'package:arpeggio/constants/sizes.dart';
+import 'package:arpeggio/features/cart/cart.dart';
 import 'package:arpeggio/widgets/appbar.dart';
 import 'package:arpeggio/widgets/product_image.dart';
 import 'package:arpeggio/widgets/product_meta_data.dart';
 import 'package:arpeggio/widgets/section_heading.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:readmore/readmore.dart';
 
@@ -39,7 +41,8 @@ class ProductDetail extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                        onPressed: () {}, child: const Text('Checkout')),
+                        onPressed: () => Get.to(() => const CartScreen()),
+                        child: const Text('Checkout')),
                   ),
                   const SizedBox(
                     height: ArpSizes.spaceBtwSections,
@@ -90,7 +93,7 @@ class ProductDetail extends StatelessWidget {
             label: Text('Tambahkan ke keranjang',
                 style: GoogleFonts.getFont('Poppins',
                     fontWeight: FontWeight.w600, color: ArpColors.white)),
-            onPressed: () {},
+            onPressed: () => Get.to(() => const CartScreen()),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(32)),
           ),

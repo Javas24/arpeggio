@@ -1,6 +1,4 @@
-import 'package:arpeggio/constants/image_strings.dart';
 import 'package:arpeggio/data/authentication_repository.dart';
-import 'package:arpeggio/features/login/login.dart';
 import 'package:arpeggio/helper/full_screen_loader.dart';
 import 'package:arpeggio/helper/loaders.dart';
 import 'package:arpeggio/helper/network_manager.dart';
@@ -18,8 +16,7 @@ class LoginController extends GetxController {
 
   Future<void> emailAndPasswordSignIn() async {
     try {
-      ArpFullScreenLoader.openLoadingDialog(
-          'Tunggu sebentar yeahh...', ArpImage.tungguDong);
+      ArpFullScreenLoader.openLoadingDialog('Tunggu sebentar yeahh...');
 
       final isConnected = await NetworkManager.instance.isConnected();
       if (!isConnected) {

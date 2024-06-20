@@ -21,8 +21,7 @@ class SignupController extends GetxController {
 
   Future<void> signup() async {
     try {
-      ArpFullScreenLoader.openLoadingDialog(
-          'Lagi memproses...', ArpImage.tungguDong);
+      ArpFullScreenLoader.openLoadingDialog('Lagi memproses...');
 
       final isConnected = await NetworkManager.instance.isConnected();
       if (!isConnected) return;

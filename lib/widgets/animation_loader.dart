@@ -7,13 +7,13 @@ class ArpAnimationLoaderWidget extends StatelessWidget {
   const ArpAnimationLoaderWidget(
       {super.key,
       required this.text,
-      required this.animation,
+      this.animation,
       this.showAction = false,
       this.actionText,
       this.onActionPressed});
 
   final String text;
-  final String animation;
+  final String? animation;
   final bool showAction;
   final String? actionText;
   final VoidCallback? onActionPressed;
@@ -25,8 +25,9 @@ class ArpAnimationLoaderWidget extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Lottie.asset(animation,
-                width: MediaQuery.of(context).size.width * 0.8),
+            if (animation != null)
+              Lottie.asset(animation!,
+                  width: MediaQuery.of(context).size.width * 0.8),
             const SizedBox(height: ArpSizes.defaultSpace),
             Text(
               text,

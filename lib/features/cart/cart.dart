@@ -11,7 +11,7 @@ class CartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const ArpAppbar(title: Text('Keranjang')),
+      appBar: const ArpAppbar(title: Text('Keranjang'), showBackArrow: true),
       body: const Padding(
         padding: EdgeInsets.all(ArpSizes.defaultSpace),
         child: ArpCartItems(),
