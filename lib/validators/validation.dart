@@ -1,7 +1,7 @@
 class ArpValidator {
   static String? validateEmptyText(String? fieldName, String? value) {
     if (value == null || value.isEmpty) {
-      return '$fieldName is required.';
+      return '$fieldName masih kosong tuhh';
     }
 
     return null;
@@ -9,14 +9,14 @@ class ArpValidator {
 
   static String? validateEmail(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Email is required.';
+      return 'Emailnya ga boleh kosong';
     }
 
     // Regular expression for email validation
     final emailRegExp = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
 
     if (!emailRegExp.hasMatch(value)) {
-      return 'Invalid email address.';
+      return 'Emailnya ga bener itu';
     }
 
     return null;
@@ -24,27 +24,27 @@ class ArpValidator {
 
   static String? validatePassword(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Password is required.';
+      return 'Passwordnya ga boleh kosong';
     }
 
     // Check for minimum password length
     if (value.length < 6) {
-      return 'Password must be at least 6 characters long.';
+      return 'Passwordnya minimal 6 karakter yaa';
     }
 
     // Check for uppercase letters
     if (!value.contains(RegExp(r'[A-Z]'))) {
-      return 'Password must contain at least one uppercase letter.';
+      return 'Passwordnya minimal ada satu huruf kapital yaa';
     }
 
     // Check for numbers
     if (!value.contains(RegExp(r'[0-9]'))) {
-      return 'Password must contain at least one number.';
+      return 'Passwordnya minimal ada satu angka.';
     }
 
     // Check for special characters
     if (!value.contains(RegExp(r'[!@#$%^&*(),.?":{}|<>]'))) {
-      return 'Password must contain at least one special character.';
+      return 'Passwordnya minimal ada satu spesial karakter';
     }
 
     return null;
@@ -52,14 +52,14 @@ class ArpValidator {
 
   static String? validatePhoneNumber(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Phone number is required.';
+      return 'Nomor teleponnya ga boleh kosong';
     }
 
     // Regular expression for phone number validation (assuming a 10-digit US phone number format)
     final phoneRegExp = RegExp(r'^\d{12}$');
 
     if (!phoneRegExp.hasMatch(value)) {
-      return 'Invalid phone number format (10 digits required).';
+      return 'Nomor teleponnya ga bener itu (12 digit yaa).';
     }
 
     return null;

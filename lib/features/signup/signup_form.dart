@@ -57,6 +57,8 @@ class ArpSignUpForm extends StatelessWidget {
               ),
             ),
             const SizedBox(height: ArpSizes.spaceBtwSections),
+
+            // Signup Button
             SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(

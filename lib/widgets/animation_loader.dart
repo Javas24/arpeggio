@@ -25,8 +25,10 @@ class ArpAnimationLoaderWidget extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Lottie.asset(animation,
-                width: MediaQuery.of(context).size.width * 0.8),
+            Lottie.asset(
+              animation,
+              width: MediaQuery.of(context).size.width,
+            ),
             const SizedBox(height: ArpSizes.defaultSpace),
             Text(
               text,

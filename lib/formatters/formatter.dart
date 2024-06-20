@@ -10,22 +10,22 @@ class ArpFormatter {
     return NumberFormat.currency(locale: 'en_US', symbol: '\$').format(amount); // Customize the currency locale and symbol as needed
   }
 
-  static String formatPhoneNumber(String phoneNumber) {
+  static String formatTelepon(String telepon) {
     // Assuming a 10-digit US phone number format: (123) 456-7890
-    if (phoneNumber.length == 10) {
-      return '(${phoneNumber.substring(0, 3)}) ${phoneNumber.substring(3, 6)} ${phoneNumber.substring(6)}';
-    } else if (phoneNumber.length == 11) {
-      return '(${phoneNumber.substring(0, 4)}) ${phoneNumber.substring(4, 7)} ${phoneNumber.substring(7)}';
+    if (telepon.length == 12) {
+      return '(${telepon.substring(0, 4)}) ${telepon.substring(4, 8)} ${telepon.substring(8)}';
+    } else if (telepon.length == 13) {
+      return '(${telepon.substring(0, 4)}) ${telepon.substring(4, 8)} ${telepon.substring(8)}';
     }
     // Add more custom phone number formatting logic for different formats if needed.
-    return phoneNumber;
+    return telepon;
   }
 
 
   // Not fully tested.
-  static String internationalFormatPhoneNumber(String phoneNumber) {
+  static String internationalFormattelepon(String telepon) {
     // Remove any non-digit characters from the phone number
-    var digitsOnly = phoneNumber.replaceAll(RegExp(r'\D'), '');
+    var digitsOnly = telepon.replaceAll(RegExp(r'\D'), '');
 
     // Extract the country code from the digitsOnly
     String countryCode = '+${digitsOnly.substring(0, 2)}';
@@ -38,7 +38,7 @@ class ArpFormatter {
     int i = 0;
     while (i < digitsOnly.length) {
       int groupLength = 2;
-      if (i == 0 && countryCode == '+1') {
+      if (i == 0 && countryCode == '+62') {
         groupLength = 3;
       }
 

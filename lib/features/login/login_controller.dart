@@ -3,7 +3,6 @@ import 'package:arpeggio/data/authentication_repository.dart';
 import 'package:arpeggio/helper/full_screen_loader.dart';
 import 'package:arpeggio/helper/loaders.dart';
 import 'package:arpeggio/helper/network_manager.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -31,12 +30,12 @@ class LoginController extends GetxController {
         return;
       }
 
-      final userCredential = await AuthenticationRepository.instance
-          .loginWithEmailAndPassword(email.text.trim(), password.text.trim());
+      // final userCredential = await AuthenticationRepository.instance
+      //     .loginWithEmailAndPassword(email.text.trim(), password.text.trim());
 
       ArpFullScreenLoader.stopLoading();
 
-      AuthenticationRepository.instance.screenRedirect(userCredential as User?);
+      AuthenticationRepository.instance.screenRedirect();
     } catch (e) {
       ArpFullScreenLoader.stopLoading();
       ArpLoaders.errorSnackBar(title: 'Lhooo!', message: e.toString());

@@ -17,9 +17,8 @@ class ArpFullScreenLoader {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const SizedBox(height: 250),
-                  Expanded(
-                      child: ArpAnimationLoaderWidget(
-                          text: text, animation: animation))
+                  ArpAnimationLoaderWidget(
+                      text: text, animation: animation)
                 ],
               ),
             )));

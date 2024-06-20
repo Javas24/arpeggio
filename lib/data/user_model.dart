@@ -17,7 +17,7 @@ class UserModel {
 
   String get namaLengkap => nama;
 
-  String get formatedTelepon => ArpFormatter.formatPhoneNumber(telepon);
+  String get formatedTelepon => ArpFormatter.formatTelepon(telepon);
 
   static UserModel empty() =>
       UserModel(id: '', nama: '', email: '', telepon: '', profilePicture: '');

@@ -10,9 +10,9 @@ class ArpFirebaseAuthException implements Exception {
   String get message {
     switch (code) {
       case 'email-already-in-use':
-        return 'The email address is already registered. Please use a different email.';
+        return 'Emailnya udah terdaftar. Coba pake email lain.';
       case 'invalid-email':
-        return 'The email address provided is invalid. Please enter a valid email.';
+        return 'Alamat emailnya ga bener. Coba masukin email yang bener';
       case 'weak-password':
         return 'The password is too weak. Please choose a stronger password.';
       case 'user-disabled':

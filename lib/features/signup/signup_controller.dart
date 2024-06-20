@@ -2,7 +2,7 @@ import 'package:arpeggio/constants/image_strings.dart';
 import 'package:arpeggio/data/authentication_repository.dart';
 import 'package:arpeggio/data/user_model.dart';
 import 'package:arpeggio/data/user_repository.dart';
-import 'package:arpeggio/features/login/login.dart';
+import 'package:arpeggio/features/signup/verify_email.dart';
 import 'package:arpeggio/helper/full_screen_loader.dart';
 import 'package:arpeggio/helper/loaders.dart';
 import 'package:arpeggio/helper/network_manager.dart';
@@ -19,15 +19,21 @@ class SignupController extends GetxController {
   final password = TextEditingController();
   GlobalKey<FormState> signupFormKey = GlobalKey<FormState>();
 
-  Future<void> signup() async {
+  void signup() async {
     try {
       ArpFullScreenLoader.openLoadingDialog(
-          'Lagi memproses...', ArpImage.tungguDong);
+          'Lagi memproses...', ArpImage.loading);
 
       final isConnected = await NetworkManager.instance.isConnected();
-      if (!isConnected) return;
+      if (!isConnected) {
+        ArpFullScreenLoader.stopLoading();
+        return;
+      }
 
-      if (!signupFormKey.currentState!.validate()) return;
+      if (!signupFormKey.currentState!.validate()) {
+        ArpFullScreenLoader.stopLoading();
+        return;
+      }
 
       final userCredential = await AuthenticationRepository.instance
           .registerWithEmailAndPassword(
@@ -49,11 +55,11 @@ class SignupController extends GetxController {
       ArpLoaders.successSnackBar(
           title: 'Yahuuu', message: 'Berhasil bikin akun nihh.');
 
-      Get.to(() => const LoginScreen());
+      Get.to(() => VerifyEmailScreen(email: email.text.trim()));
     } catch (e) {
       ArpFullScreenLoader.stopLoading();
 
-      ArpLoaders.errorSnackBar(title: 'Lhooo!', message: e.toString());
+      ArpLoaders.errorSnackBar(title: 'Waduhhh!', message: e.toString());
     }
   }
 }

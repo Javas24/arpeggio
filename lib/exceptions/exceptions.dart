@@ -4,49 +4,59 @@ class ArpExceptions implements Exception {
   final String message;
 
   /// Default constructor with a generic error message.
-  const ArpExceptions([this.message = 'An unexpected error occurred. Please try again.']);
+  const ArpExceptions([this.message = 'Error nihh. Coba lagi dehh.']);
 
   /// Create an authentication exception from a Firebase authentication exception code.
   factory ArpExceptions.fromCode(String code) {
     switch (code) {
       case 'email-already-in-use':
-        return const ArpExceptions('The email address is already registered. Please use a different email.');
+        return const ArpExceptions(
+            'Emailnya udah terdaftar. Coba pake email lain.');
       case 'invalid-email':
-        return const ArpExceptions('The email address provided is invalid. Please enter a valid email.');
+        return const ArpExceptions(
+            'Alamat emailnya ga bener. Coba masukin email yang bener');
       case 'weak-password':
-        return const ArpExceptions('The password is too weak. Please choose a stronger password.');
+        return const ArpExceptions(
+            'Passwordnya gampang dibobol. Coba pilih password lain');
       case 'user-disabled':
-        return const ArpExceptions('This user account has been disabled. Please contact support for assistance.');
+        return const ArpExceptions(
+            'Akun pengguna ini dimatikan. Coba hubungi bantuan support');
       case 'user-not-found':
-        return const ArpExceptions('Invalid login details. User not found.');
+        return const ArpExceptions('Ga bisa login. Usernya ga ada');
       case 'wrong-password':
-        return const ArpExceptions('Incorrect password. Please check your password and try again.');
+        return const ArpExceptions('Password salah. Coba cek lagi dehh');
       case 'INVALID_LOGIN_CREDENTIALS':
-        return const ArpExceptions('Invalid login credentials. Please double-check your information.');
+        return const ArpExceptions('Ga bisa login. Coba cek lagi dehh');
       case 'too-many-requests':
-        return const ArpExceptions('Too many requests. Please try again later.');
+        return const ArpExceptions('Sabarrr. Coba lagi nanti');
       case 'invalid-argument':
-        return const ArpExceptions('Invalid argument provided to the authentication method.');
+        return const ArpExceptions(
+            'Invalid argument provided to the authentication method.');
       case 'invalid-password':
-        return const ArpExceptions('Incorrect password. Please try again.');
+        return const ArpExceptions('Password salah. Coba cek lagi dehh');
       case 'invalid-phone-number':
-        return const ArpExceptions('The provided phone number is invalid.');
+        return const ArpExceptions('Nomor teleponnya ga bener itu');
       case 'operation-not-allowed':
-        return const ArpExceptions('The sign-in provider is disabled for your Firebase project.');
+        return const ArpExceptions(
+            'The sign-in provider is disabled for your Firebase project.');
       case 'session-cookie-expired':
-        return const ArpExceptions('The Firebase session cookie has expired. Please sign in again.');
+        return const ArpExceptions(
+            'The Firebase session cookie has expired. Please sign in again.');
       case 'uid-already-exists':
-        return const ArpExceptions('The provided user ID is already in use by another user.');
+        return const ArpExceptions('User id udah dipake orang lain');
       case 'sign_in_failed':
-        return const ArpExceptions('Sign-in failed. Please try again.');
+        return const ArpExceptions('Gagal masuk. Coba lagi dehh');
       case 'network-request-failed':
-        return const ArpExceptions('Network request failed. Please check your internet connection.');
+        return const ArpExceptions(
+            'Ga ada internet. Coba cek koneksi internet kamu');
       case 'internal-error':
         return const ArpExceptions('Internal error. Please try again later.');
       case 'invalid-verification-code':
-        return const ArpExceptions('Invalid verification code. Please enter a valid code.');
+        return const ArpExceptions(
+            'Kode verifikasinya ga bener. Coba masukin kode yang bener');
       case 'invalid-verification-id':
-        return const ArpExceptions('Invalid verification ID. Please request a new verification code.');
+        return const ArpExceptions(
+            'Verifikasi ID nya ga bener. Coba minta kode verifikasi yang baru');
       case 'quota-exceeded':
         return const ArpExceptions('Quota exceeded. Please try again later.');
       default:
