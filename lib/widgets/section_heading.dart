@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ArpSectionHeading extends StatelessWidget {
   const ArpSectionHeading(
@@ -7,9 +8,11 @@ class ArpSectionHeading extends StatelessWidget {
       this.showActionButton = true,
       required this.title,
       this.buttonTitle = 'Lihat Semua',
-      this.onPressed});
+      this.onPressed,
+      this.fontSize});
 
   final Color? textColor;
+  final double? fontSize;
   final bool showActionButton;
   final String title, buttonTitle;
   final void Function()? onPressed;
@@ -20,10 +23,8 @@ class ArpSectionHeading extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(title,
-            style: Theme.of(context)
-                .textTheme
-                .headlineSmall!
-                .apply(color: textColor),
+            style: GoogleFonts.getFont('Poppins',
+                fontSize: fontSize, fontWeight: FontWeight.w600),
             maxLines: 1,
             overflow: TextOverflow.ellipsis),
         if (showActionButton)

@@ -41,11 +41,12 @@ class ArpRoundedImage extends StatelessWidget {
         padding: padding,
         decoration: BoxDecoration(
           border: border,
-        ),
-        child: ClipRRect(
           borderRadius: applyIMageRadius
               ? BorderRadius.circular(borderRadius)
               : BorderRadius.zero,
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(borderRadius),
           child: Image(
               image: isNetworkImage
                   ? NetworkImage(imageUrl)

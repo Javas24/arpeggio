@@ -1,4 +1,5 @@
-import 'package:arpeggio/features/login/login.dart';
+import 'package:arpeggio/binding/general_bindings.dart';
+import 'package:arpeggio/constants/colors.dart';
 import 'package:arpeggio/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,8 +14,9 @@ class MainApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: ArpAppTheme.lightTheme,
       darkTheme: ArpAppTheme.darkTheme,
+      initialBinding: GeneralBindings(),
       debugShowCheckedModeBanner: false,
-      home: const LoginScreen(),
+      home: const Scaffold(backgroundColor: ArpColors.primary, body: Center(child: CircularProgressIndicator(color: Colors.white))),
     );
   }
 }

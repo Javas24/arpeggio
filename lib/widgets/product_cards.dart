@@ -1,11 +1,13 @@
 import 'package:arpeggio/constants/colors.dart';
 import 'package:arpeggio/constants/sizes.dart';
 import 'package:arpeggio/constants/text_strings.dart';
+import 'package:arpeggio/features/product_detail/product_detail.dart';
 import 'package:arpeggio/styles/shadow.dart';
 import 'package:arpeggio/widgets/button_lihat.dart';
 import 'package:arpeggio/widgets/product_title_text.dart';
 import 'package:arpeggio/widgets/rounded_container.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ArpProductCards extends StatelessWidget {
@@ -14,7 +16,7 @@ class ArpProductCards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(() => const ProductDetail()),
       child: Container(
         width: 172,
         padding: const EdgeInsets.all(0),
@@ -77,7 +79,7 @@ class ArpProductCards extends StatelessWidget {
                   ),
                   ElevatedButton(
                       style: buttonLihat,
-                      onPressed: () {},
+                      onPressed: () => Get.to(() => const ProductDetail()),
                       child: Text(
                         ArpTexts.lihat,
                         style: GoogleFonts.getFont('Poppins',

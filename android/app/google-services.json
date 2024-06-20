@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "146651058503",
+    "project_id": "arpeggio-f16cd",
+    "storage_bucket": "arpeggio-f16cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:146651058503:android:2d97fc5b1e48b08232fc62",
+        "android_client_info": {
+          "package_name": "com.arpeggio.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "146651058503-8g4jq24tulm43boagekepokhomv21qkj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEXFf169Lzd9GdjjBNG73bqnvJXwcb-IA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "146651058503-8g4jq24tulm43boagekepokhomv21qkj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "146651058503-0jggc3s8t691akskueld6he7irac6e6g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.arpeggio"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:146651058503:android:3fa3700f22cd14f932fc62",
+        "android_client_info": {
+          "package_name": "com.example.arpeggio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "146651058503-o0uu9pddkuo963s2ktosidlggdjsg70r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.arpeggio",
+            "certificate_hash": "72a512e55fe966ad1c2dc3be6301333ea7d0e0f3"
+          }
+        },
+        {
+          "client_id": "146651058503-8g4jq24tulm43boagekepokhomv21qkj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEXFf169Lzd9GdjjBNG73bqnvJXwcb-IA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "146651058503-8g4jq24tulm43boagekepokhomv21qkj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "146651058503-0jggc3s8t691akskueld6he7irac6e6g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.arpeggio"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

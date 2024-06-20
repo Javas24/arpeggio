@@ -1,11 +1,8 @@
 import 'package:arpeggio/constants/colors.dart';
-import 'package:arpeggio/constants/sizes.dart';
 import 'package:arpeggio/constants/text_strings.dart';
-import 'package:arpeggio/features/login/login.dart';
+import 'package:arpeggio/features/signup/signup_form.dart';
 import 'package:arpeggio/styles/spacing_style.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -48,59 +45,17 @@ class SignUpScreen extends StatelessWidget {
                               blurRadius: 10,
                             )
                           ]),
-                      child: Padding(
-                        padding: const EdgeInsets.all(16.0),
+                      child: const Padding(
+                        padding: EdgeInsets.all(16.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Text(ArpTexts.headlineDaftar,
+                            Text(ArpTexts.headlineDaftar,
                                 style: TextStyle(
                                     color: ArpColors.orange,
                                     fontSize: 42,
                                     fontWeight: FontWeight.w900)),
-                            Form(
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    vertical: ArpSizes.spaceBtwItems),
-                                child: Column(
-                                  children: [
-                                    TextFormField(
-                                      decoration: const InputDecoration(
-                                          labelText: ArpTexts.name),
-                                    ),
-                                    const SizedBox(
-                                        height: ArpSizes.spaceBtwInputFields),
-                                    TextFormField(
-                                      decoration: const InputDecoration(
-                                          labelText: ArpTexts.email),
-                                    ),
-                                    const SizedBox(
-                                        height: ArpSizes.spaceBtwInputFields),
-                                    TextFormField(
-                                      decoration: const InputDecoration(
-                                          labelText: ArpTexts.telepon),
-                                    ),
-                                    const SizedBox(
-                                        height: ArpSizes.spaceBtwInputFields),
-                                    TextFormField(
-                                      decoration: const InputDecoration(
-                                        labelText: ArpTexts.password,
-                                        suffixIcon: Icon(Iconsax.eye_slash),
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                        height: ArpSizes.spaceBtwSections),
-                                    SizedBox(
-                                        width: double.infinity,
-                                        child: ElevatedButton(
-                                            onPressed: () => Get.to(
-                                                () => const LoginScreen()),
-                                            child: const Text(
-                                                ArpTexts.headlineDaftar))),
-                                  ],
-                                ),
-                              ),
-                            ),
+                            ArpSignUpForm(),
                           ],
                         ),
                       ),

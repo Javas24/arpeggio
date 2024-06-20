@@ -10,8 +10,8 @@ class ArpRoundedContainer extends StatelessWidget {
       this.radius = ArpSizes.cardRadiusLg,
       this.child,
       this.showBorder = false,
-      this.borderColor = ArpColors.borderPrimary,
-      this.backgroundColor = ArpColors.arpGradient,
+      this.borderColor = ArpColors.primary,
+      this.backgroundColor,
       this.padding,
       this.margin,
       this.backgroundTransparent = Colors.transparent});
@@ -23,7 +23,7 @@ class ArpRoundedContainer extends StatelessWidget {
   final bool showBorder;
   final Color borderColor;
   final Color backgroundTransparent;
-  final Gradient backgroundColor;
+  final Gradient? backgroundColor;
   final EdgeInsetsGeometry? padding;
   final EdgeInsetsGeometry? margin;
 

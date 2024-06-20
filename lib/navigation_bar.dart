@@ -1,5 +1,6 @@
+import 'package:arpeggio/features/cart/cart.dart';
 import 'package:arpeggio/features/home/home.dart';
-import 'package:arpeggio/features/profile/profile.dart';
+import 'package:arpeggio/features/profile/akun_settings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -14,7 +15,7 @@ class ArpNavigationBar extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: Obx(
         () => NavigationBar(
-          height: 80,
+          height: 62,
           elevation: 0,
           selectedIndex: controller.selectedIndex.value,
           onDestinationSelected: (index) =>
@@ -36,7 +37,7 @@ class NavigationController extends GetxController {
 
   final screens = [
     const HomeScreen(),
-    Container(color: Colors.blue),
-    const ProfileScreen()
+    const CartScreen(),
+    const AkunSettings()
   ];
 }
