@@ -1,4 +1,5 @@
 import 'package:arpeggio/formatters/formatter.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class UserModel {
   final String id;
@@ -29,5 +30,20 @@ class UserModel {
       'Telepon': telepon,
       'ProfilePicture': profilePicture,
     };
+  }
+
+  factory UserModel.fromSnapshot(
+      DocumentSnapshot<Map<String, dynamic>> document) {
+    if (document.data() != null) {
+      final data = document.data()!;
+      return UserModel(
+          id: document.id,
+          nama: data['Nama'] ?? '',
+          email: data['Email'] ?? '',
+          telepon: data['Telepon'] ?? '',
+          profilePicture: data['ProfilePicture'] ?? '');
+    } else {
+      return UserModel.empty();
+    }
   }
 }

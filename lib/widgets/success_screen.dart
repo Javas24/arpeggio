@@ -21,10 +21,13 @@ class SuccessScreen extends StatelessWidget {
           padding: ArpSpacingStyle.paddingWithAppBarHeight * 2,
           child: Column(
             children: [
+              // Image
               Image(image: AssetImage(image), width: 260),
               const SizedBox(height: ArpSizes.spaceBtwSections),
+              // Title
               Text(title, textAlign: TextAlign.center),
               const SizedBox(height: ArpSizes.spaceBtwItems),
+              // Button
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(

@@ -20,13 +20,13 @@ class ArpFirebaseException implements Exception {
       case 'user-not-found':
         return 'No user found for the given email or UID.';
       case 'invalid-email':
-        return 'The email address provided is invalid. Please enter a valid email.';
+        return 'Alamat emailnya ga bener. Coba masukin email yang bener';
       case 'email-already-in-use':
-        return 'The email address is already registered. Please use a different email.';
+        return 'Emailnya udah terdaftar. Coba pake email lain.';
       case 'wrong-password':
-        return 'Incorrect password. Please check your password and try again.';
+        return 'Password salah. Coba cek lagi dehh';
       case 'weak-password':
-        return 'The password is too weak. Please choose a stronger password.';
+        return 'Passwordnya gampang dibobol. Coba pilih password lain';
       case 'provider-already-linked':
         return 'The account is already linked with another provider.';
       case 'operation-not-allowed':

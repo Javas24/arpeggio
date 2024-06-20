@@ -4,7 +4,7 @@ class ArpTexts {
   static const String and = "and";
   static const String skip = "Skip";
   static const String done = "Done";
-  static const String submit = "Submit";
+  static const String submit = "Kirim";
   static const String appName = "T-Store";
   static const String tContinue = "Lanjut kuyy";
   static const String lihat = "Lihat";
@@ -30,15 +30,15 @@ class ArpTexts {
   static const String telepon = "Telepon";
   static const String rememberMe = "Remember Me";
   static const String forgetPassword = "Lupa Password?";
-  static const String signIn = "Sign In";
-  static const String createAccount = "Create Account";
+  static const String signIn = "Masuk";
+  static const String createAccount = "Buat Akun";
   static const String orSignInWith = "or sign in with";
   static const String orSignUpWith = "or sign up with";
   static const String iAgreeTo = "I agree to";
   static const String privacyPolicy = "Privacy Policy";
   static const String termsOfUse = "Terms of use";
   static const String verificationCode = "verificationCode";
-  static const String resendEmail = "Resend Email";
+  static const String resendEmail = "Kirim Ulang Email";
   static const String resendEmailIn = "Resend email in";
 
   // Headline
@@ -50,12 +50,13 @@ class ArpTexts {
   static const String loginSubTitle =
       "Discover Limitless Choices and Unmatched Convenience.";
   static const String signupTitle = "Let’s create your account";
-  static const String forgetPasswordTitle = "Forget password";
+  static const String forgetPasswordTitle = "Lupa password";
   static const String forgetPasswordSubTitle =
-      "Don’t worry sometimes people can forget too, enter your email and we will send you a password reset link.";
-  static const String changeYourPasswordTitle = "Password Reset Email Sent";
+      "Namanya juga manusia pasti bisa lupa, masukin emailmu nanti kita kirim link reset password.";
+  static const String changeYourPasswordTitle =
+      "Email reset password udah dikirim.";
   static const String changeYourPasswordSubTitle =
-      "Your Account Security is Our Priority! We've Sent You a Secure Link to Safely Change Your Password and Keep Your Account Protected.";
+      "Tenang ajaaa! Kita kirim link yang aman buat ganti passwordmu dan yang pasti akunmu tetap aman.";
   static const String confirmEmail = "Verifikasi email kamu!";
   static const String confirmEmailSubTitle =
       "Segera verikasi email kamu, biar bisa langsung belanja gitar. Yukkk!!!";

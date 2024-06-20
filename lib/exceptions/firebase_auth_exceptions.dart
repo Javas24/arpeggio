@@ -12,27 +12,27 @@ class ArpFirebaseAuthException implements Exception {
       case 'email-already-in-use':
         return 'Emailnya udah terdaftar. Coba pake email lain.';
       case 'invalid-email':
-        return 'Alamat emailnya ga bener. Coba masukin email yang bener';
+        return 'Alamat emailnya ga bener. Coba masukin email yang bener.';
       case 'weak-password':
-        return 'The password is too weak. Please choose a stronger password.';
+        return 'Passwordnya gampang dibobol. Coba pilih password lain.';
       case 'user-disabled':
-        return 'This user account has been disabled. Please contact support for assistance.';
+        return 'Akun pengguna ini dimatikan. Coba hubungi bantuan support.';
       case 'user-not-found':
-        return 'Invalid login details. User not found.';
+        return 'Ga bisa login. User ga ada';
       case 'wrong-password':
-        return 'Incorrect password. Please check your password and try again.';
+        return 'Password salah. Coba cek lagi dehh';
       case 'invalid-verification-code':
-        return 'Invalid verification code. Please enter a valid code.';
+        return 'Kode verifikasinya ga bener. Coba masukin kode yang bener';
       case 'invalid-verification-id':
-        return 'Invalid verification ID. Please request a new verification code.';
+        return 'Verifikasi ID nya ga bener. Coba minta kode verifikasi yang baru';
       case 'quota-exceeded':
         return 'Quota exceeded. Please try again later.';
       case 'email-already-exists':
-        return 'The email address already exists. Please use a different email.';
+        return 'Email ini udah ada. Coba pakai email lainnya';
       case 'provider-already-linked':
-        return 'The account is already linked with another provider.';
+        return 'Akunnya nyambung ke provider lain';
       case 'requires-recent-login':
-        return 'This operation is sensitive and requires recent authentication. Please log in again.';
+        return 'Operasinya agak sensitif dan perlu autentikasi. Login lagi aja yaa';
       case 'credential-already-in-use':
         return 'This credential is already associated with a different user account.';
       case 'user-mismatch':

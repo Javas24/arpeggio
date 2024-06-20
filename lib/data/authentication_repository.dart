@@ -3,7 +3,6 @@ import 'package:arpeggio/exceptions/firebase_exceptions.dart';
 import 'package:arpeggio/exceptions/format_exceptions.dart';
 import 'package:arpeggio/exceptions/platform_exceptions.dart';
 import 'package:arpeggio/features/login/login.dart';
-import 'package:arpeggio/features/signup/signup.dart';
 import 'package:arpeggio/features/signup/verify_email.dart';
 import 'package:arpeggio/navigation_bar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -17,6 +16,8 @@ class AuthenticationRepository extends GetxController {
 
   final deviceStorage = GetStorage();
   final _auth = FirebaseAuth.instance;
+
+  User? get authUser => _auth.currentUser;
 
   @override
   void onReady() {
@@ -36,7 +37,7 @@ class AuthenticationRepository extends GetxController {
       deviceStorage.writeIfNull('IsFirstTime', true);
       deviceStorage.read('IsFirstTime') != true
           ? Get.offAll(() => const LoginScreen())
-          : Get.offAll(const SignUpScreen());
+          : Get.offAll(const LoginScreen());
     }
   }
 
@@ -79,6 +80,22 @@ class AuthenticationRepository extends GetxController {
   Future<void> sendEmailVerification() async {
     try {
       await _auth.currentUser?.sendEmailVerification();
+    } on FirebaseAuthException catch (e) {
+      throw ArpFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw ArpFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw const ArpFormatException();
+    } on PlatformException catch (e) {
+      throw ArpPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Sepertinya ada yang salah, coba lagi deh';
+    }
+  }
+
+  Future<void> sendPasswordResetEmail(String email) async {
+    try {
+      await _auth.sendPasswordResetEmail(email: email);
     } on FirebaseAuthException catch (e) {
       throw ArpFirebaseAuthException(e.code).message;
     } on FirebaseException catch (e) {

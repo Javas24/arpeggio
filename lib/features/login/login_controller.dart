@@ -17,7 +17,7 @@ class LoginController extends GetxController {
   Future<void> emailAndPasswordSignIn() async {
     try {
       ArpFullScreenLoader.openLoadingDialog(
-          'Tunggu sebentar yeahh...', ArpImage.tungguDong);
+          'Tunggu sebentar yeahh...', ArpImage.loading);
 
       final isConnected = await NetworkManager.instance.isConnected();
       if (!isConnected) {
@@ -30,8 +30,8 @@ class LoginController extends GetxController {
         return;
       }
 
-      // final userCredential = await AuthenticationRepository.instance
-      //     .loginWithEmailAndPassword(email.text.trim(), password.text.trim());
+      final userCredentials = await AuthenticationRepository.instance
+          .loginWithEmailAndPassword(email.text.trim(), password.text.trim());
 
       ArpFullScreenLoader.stopLoading();
 

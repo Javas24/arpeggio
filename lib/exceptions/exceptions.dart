@@ -22,7 +22,7 @@ class ArpExceptions implements Exception {
         return const ArpExceptions(
             'Akun pengguna ini dimatikan. Coba hubungi bantuan support');
       case 'user-not-found':
-        return const ArpExceptions('Ga bisa login. Usernya ga ada');
+        return const ArpExceptions('Ga bisa login. User ga ada');
       case 'wrong-password':
         return const ArpExceptions('Password salah. Coba cek lagi dehh');
       case 'INVALID_LOGIN_CREDENTIALS':

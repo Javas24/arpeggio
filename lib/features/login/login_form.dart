@@ -1,6 +1,7 @@
 import 'package:arpeggio/constants/colors.dart';
 import 'package:arpeggio/constants/sizes.dart';
 import 'package:arpeggio/constants/text_strings.dart';
+import 'package:arpeggio/features/login/forget_password.dart';
 // import 'package:arpeggio/features/home/home.dart';
 import 'package:arpeggio/features/login/login_controller.dart';
 import 'package:arpeggio/features/signup/signup.dart';
@@ -23,11 +24,14 @@ class ArpLoginForm extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: ArpSizes.spaceBtwItems),
         child: Column(
           children: [
+            // Email
             TextFormField(
               controller: controller.email,
               validator: (value) => ArpValidator.validateEmail(value),
               decoration: const InputDecoration(labelText: ArpTexts.email),
             ),
+            const SizedBox(height: ArpSizes.spaceBtwItems),
+            // Password
             Obx(
               () => TextFormField(
                 validator: (value) =>
@@ -50,7 +54,7 @@ class ArpLoginForm extends StatelessWidget {
             Row(
               children: [
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => const ForgetPassword()),
                     child: const Text(ArpTexts.forgetPassword,
                         style: TextStyle(color: ArpColors.orange))),
               ],
@@ -60,8 +64,7 @@ class ArpLoginForm extends StatelessWidget {
                 height: 46,
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () =>
-                        Get.to(() => controller.emailAndPasswordSignIn()),
+                    onPressed: () => controller.emailAndPasswordSignIn(),
                     child: const Text(ArpTexts.headlineMasuk))),
             const SizedBox(height: ArpSizes.spaceBtwItems),
             SizedBox(
