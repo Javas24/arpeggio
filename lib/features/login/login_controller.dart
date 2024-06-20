@@ -1,6 +1,5 @@
 import 'package:arpeggio/constants/image_strings.dart';
 import 'package:arpeggio/data/authentication_repository.dart';
-import 'package:arpeggio/features/login/login.dart';
 import 'package:arpeggio/helper/full_screen_loader.dart';
 import 'package:arpeggio/helper/loaders.dart';
 import 'package:arpeggio/helper/network_manager.dart';
