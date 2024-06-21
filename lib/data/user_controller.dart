@@ -1,35 +1,29 @@
-// import 'package:arpeggio/data/user_model.dart';
-// import 'package:arpeggio/data/user_repository.dart';
-// import 'package:arpeggio/helper/loaders.dart';
-// import 'package:firebase_auth/firebase_auth.dart';
-// import 'package:get/get.dart';
+import 'package:arpeggio/data/user_model.dart';
+import 'package:arpeggio/data/user_repository.dart';
+import 'package:get/get.dart';
 
-// class UserController extends GetxController {
-//   static UserController get instance => Get.find();
+class UserController extends GetxController {
+  static UserController get instance => Get.find();
 
-//   final userRepository = Get.put(UserRepository());
+  final profileLoading = false.obs;
+  Rx<UserModel> user = UserModel.empty().obs;
+  final userRepository = Get.put(UserRepository());
 
-//   Future<void> saveUserRecord(UserCredential? userCredentials) async {
-//     try {
-//       if (userCredentials != null) {
-//         final nameParts =
-//             UserModel.nameParts(userCredentials.user!.displayName ?? '');
-//         final userName =
-//             UserModel.generateUsername(userCredentials.user!.displayName ?? '');
+  @override
+  void onInit() {
+    super.onInit();
+    fetchUserRecord;
+  }
 
-//         final user = UserModel(
-//             id: userCredentials.user!.uid,
-//             nama: nameParts[0],
-//             email: userCredentials.user!.email ?? '',
-//             telepon: userCredentials.user!.telepon ?? '',
-//             profilePicture: userCredentials.user!.photoURL);
-//         await UserRepository.saveUserRecord(user);
-//       }
-//     } catch (e) {
-//       ArpLoaders.warningSnackBar(
-//           title: 'Datanya ga kesimpen',
-//           message:
-//               'Ada yang salah pas kamu nyimpen info. Kamu bisa save ulang datamu di Profile.');
-//     }
-//   }
-// }
+  Future<void> fetchUserRecord() async {
+    try {
+      profileLoading.value = true;
+      final user = await userRepository.fetchUserDetails();
+      this.user(user);
+    } catch (e) {
+      user(UserModel.empty());
+    } finally {
+      profileLoading.value = false;
+    }
+  }
+}

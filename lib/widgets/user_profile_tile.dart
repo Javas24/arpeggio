@@ -7,7 +7,8 @@ import 'package:iconsax/iconsax.dart';
 
 class ArpUserProfileTile extends StatelessWidget {
   const ArpUserProfileTile({
-    super.key, required this.onPressed,
+    super.key,
+    required this.onPressed,
   });
 
   final VoidCallback onPressed;
